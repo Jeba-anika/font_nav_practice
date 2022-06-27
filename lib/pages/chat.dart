@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class ChatScreen extends StatelessWidget {
-  const ChatScreen({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('this is home screen'),
+      body: Padding(
+        padding: const EdgeInsets.all(50),
+        child: Column(
+          children: [
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/second-screen');
+                },
+                child: Text('First Screen'))
+          ],
+        ),
+      ),
     );
   }
 }

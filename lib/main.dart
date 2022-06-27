@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_app/bottomNavBar.dart';
+import 'package:practice_app/detailsScreen.dart';
+import 'package:practice_app/pages/chat.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,6 +18,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      initialRoute: '/',
+      routes: {
+        '/first-screen': (context) => ChatScreen(),
+        '/second-screen': (context) => DetailsScreen(),
+      },
       home: BottomNavBar(),
     );
   }
